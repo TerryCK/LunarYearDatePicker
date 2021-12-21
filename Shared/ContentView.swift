@@ -8,19 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
-    
-    @State var date = Date()
-    
+    @State var lunerDateViewModel = LunarDatePickerViewModel(date: Date())
+
     var body: some View {
         VStack(alignment: .leading) {
-            LunarDatePicker($date)
+            LunarDatePicker(viewModel: $lunerDateViewModel)
                 .pickerStyle(MenuPickerStyle())
-            
+
             DatePicker("國曆出生",
-                       selection: $date,
+                       selection: $lunerDateViewModel.date,
                        displayedComponents: [.date])
-                
-            
+
+
         }.padding()
     }
 }

@@ -32,9 +32,8 @@ extension Date {
 }
 
 
-
-final class LunarDatePickerViewModel: ObservableObject {
-    @Binding var date: Date
+struct LunarDatePickerViewModel {
+    var date: Date
     
     var day  : Int   { date.day.day   }
     var month: Int   { date.day.month }
@@ -54,8 +53,8 @@ final class LunarDatePickerViewModel: ObservableObject {
     
     
 
-    init(date: Binding<Date>) {
-        self._date = date
+    init(date: Date) {
+        self.date = date
     }
     
     func convertString(year: Int, month: Int, day: Int) -> String {
@@ -74,7 +73,7 @@ final class LunarDatePickerViewModel: ObservableObject {
         taiwanLunarDateFullString(from: convert(year: year, month: month, day: day))
     }
     
-    func setDate(year: Int? = nil, month: Int? = nil, day: Int? = nil) {
+    mutating func setDate(year: Int? = nil, month: Int? = nil, day: Int? = nil) {
         let dayStruct = date.day
         let year = year ?? dayStruct.year
         let month = month ?? dayStruct.month
@@ -97,15 +96,10 @@ final class LunarDatePickerViewModel: ObservableObject {
         return yearString + dateString
     }
 }
-extension LunarDatePicker {
-    // Convenient constructor
-    init(_ date: Binding<Date>) {
-        self.init(viewModel: .init(date: date))
-    }
-}
+
 struct LunarDatePicker: View {
-    
-    @ObservedObject var viewModel: LunarDatePickerViewModel
+
+    @Binding var viewModel: LunarDatePickerViewModel
     
     var body: some View {
         VStack(spacing: 8) {
@@ -144,6 +138,6 @@ struct LunarDatePicker: View {
 
 struct LunarDatePicker_Previews: PreviewProvider {
     static var previews: some View {
-        LunarDatePicker(viewModel: .init(date: .constant(.init())))
+        LunarDatePicker(viewModel: .constant(.init(date: Date())))
     }
 }
