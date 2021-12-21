@@ -1,9 +1,7 @@
 # LunarYearDatePicker
 a Swift UI component for Lunar Calendar Picker
 
-!["ScreenShots"](/Screenshot/1.png)
-
-
+<img src="/Screenshot/1.png" alt="drawing" width="200"/>
 
 Usage:
 ```swift
