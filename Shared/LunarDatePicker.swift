@@ -9,9 +9,11 @@ import SwiftUI
 import Combine
 
 
+// TODO: Suggest to rename to `LunarDate`
 struct Day {
    let year, month, day: Int
 }
+// TODO: Move logic from `LunarDateModel` into `LunarDate`'s extension
 
 extension Date {
    
@@ -32,6 +34,7 @@ extension Date {
 }
 
 
+// TODO: Suggest to rename to `LunarDateModel`
 struct LunarDatePickerViewModel {
     var date: Date
     
