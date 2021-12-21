@@ -1,13 +1,5 @@
-//
-//  LunarDatePicker.swift
-//  LunarDatePicker
-//
-//  Created by CHEN GUAN-JHEN on 2021/12/21.
-//
-
 import SwiftUI
 import Combine
-
 
 struct Day {
    let year, month, day: Int
@@ -35,13 +27,24 @@ extension Date {
 
 final class LunarDatePickerViewModel: ObservableObject {
     @Binding var date: Date
+    private var cache = [Date: Day]()
     
-    var day  : Int   { date.day.day   }
-    var month: Int   { date.day.month }
-    var year : Int   { date.day.year  }
+    var day  : Int   { getDay(\.day)   }
+    var month: Int   { getDay(\.month) }
+    var year : Int   { getDay(\.year)  }
     
     
-    func convert(year: Int, month: Int, day: Int) -> Date {
+    private func getDay<T>(_ keyPath: KeyPath<Day, T>) -> T {
+        if let cacheDay = cache[date] {
+            return cacheDay[keyPath: keyPath]
+        } else {
+            let day = date.day
+            cache[date] = day
+            return day[keyPath: keyPath]
+        }
+    }
+    
+    private func convert(year: Int, month: Int, day: Int) -> Date {
         let chineseCalendar = Calendar(identifier: .chinese)
         //        let year = Calendar(identifier: .republicOfChina)
         let correctYear = 72
@@ -58,21 +61,6 @@ final class LunarDatePickerViewModel: ObservableObject {
         self._date = date
     }
     
-    func convertString(year: Int, month: Int, day: Int) -> String {
-        convertToSolar(from: convert(year: year, month: month, day: day))
-    }
-    
-    func convertToSolar(from date: Date) -> String {
-        let formatter = DateFormatter()
-        formatter.calendar = .current
-        formatter.dateStyle = .short
-        formatter.locale = Locale(identifier: "zh-CN")
-        return "國曆:" + formatter.string(from: date)
-    }
-    
-    func converttaiwanLunarString(year: Int, month: Int, day: Int) -> String {
-        taiwanLunarDateFullString(from: convert(year: year, month: month, day: day))
-    }
     
     func setDate(year: Int? = nil, month: Int? = nil, day: Int? = nil) {
         let dayStruct = date.day
@@ -81,22 +69,8 @@ final class LunarDatePickerViewModel: ObservableObject {
         let day = day ?? dayStruct.day
         date = convert(year: year, month: month, day: day)
     }
-    
-    func taiwanLunarDateFullString(from date: Date) -> String {
-        let chineseCalendar = Calendar(identifier: .chinese)
-        let year = Calendar(identifier: .republicOfChina)
-        let locale = Locale(identifier: "zh-CN")
-        
-        let formatter = DateFormatter()
-        formatter.calendar = year
-        formatter.dateStyle = .full
-        formatter.locale = locale
-        let yearString = formatter.string(from: date).captureGroups(with: "([^年]*)".regex).first ?? ""
-        formatter.calendar = chineseCalendar
-        let dateString = formatter.string(from: date).captureGroups(with: "年([^日星期]*)".regex).first ?? ""
-        return yearString + dateString
-    }
 }
+
 extension LunarDatePicker {
     // Convenient constructor
     init(_ date: Binding<Date>) {
@@ -139,11 +113,5 @@ struct LunarDatePicker: View {
                 }
             }
         }
-    }
-}
-
-struct LunarDatePicker_Previews: PreviewProvider {
-    static var previews: some View {
-        LunarDatePicker(viewModel: .init(date: .constant(.init())))
     }
 }
