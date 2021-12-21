@@ -108,7 +108,7 @@ struct LunarDatePicker: View {
                 Picker("選擇一個年", selection: Binding(get: { viewModel.year },
                                                       set: { viewModel.setDate(year: $0)})
                 ) {
-                    ForEach(0...viewModel.year, id: \.self) { index in
+                    ForEach(1...Date().day.year, id: \.self) { index in
                         Text("民國 " + String(index) + " 年")
                             .tag(index)
                     }
