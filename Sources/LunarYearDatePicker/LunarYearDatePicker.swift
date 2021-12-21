@@ -10,14 +10,35 @@ import Combine
 
 
 // TODO: Suggest to rename to `LunarDate`
-struct Day {
+struct LunarDate {
    let year, month, day: Int
 }
 // TODO: Move logic from `LunarDateModel` into `LunarDate`'s extension
 
-extension Date {
-   
-    var day: Day {
+
+// TODO: Suggest to rename to `LunarDateModel`
+struct LunarDateModel {
+    var date: Date
+    
+    var day  : Int   { fetch(date, \.day)   }
+    var month: Int   { fetch(date, \.month) }
+    var year : Int   { fetch(date, \.year)  }
+    
+    private static var cache = [Date: LunarDate]()
+    
+    
+    private func fetch<T>(_ date: Date,_ keyPath: KeyPath<LunarDate, T>) -> T {
+        if let cacheDay = Self.cache[date] {
+            return cacheDay[keyPath: keyPath]
+        } else {
+            let day = lunarConvert(date: date)
+            Self.cache[date] = day
+            return day[keyPath: keyPath]
+        }
+    }
+
+    
+    private func lunarConvert(date: Date) -> LunarDate {
         let year = Calendar(identifier: .republicOfChina)
         let locale = Locale(identifier: "zh-CN")
         
@@ -25,22 +46,12 @@ extension Date {
         formatter.calendar = year
         formatter.dateStyle = .full
         formatter.locale = locale
-        let string = formatter.string(from: self)
+        let string = formatter.string(from: date)
         let dateInt = string.captureGroups(with: "(\\d*)[^年](\\d*)[^月](\\d*)[^日]".regex).compactMap(Int.init)
-        return Day(year: dateInt[0],
+        return LunarDate(year: dateInt[0],
                    month: dateInt[1] - 1,
                    day: dateInt[2] - 3)
     }
-}
-
-
-// TODO: Suggest to rename to `LunarDateModel`
-struct LunarDatePickerViewModel {
-    var date: Date
-    
-    var day  : Int   { date.day.day   }
-    var month: Int   { date.day.month }
-    var year : Int   { date.day.year  }
     
     
     func convert(year: Int, month: Int, day: Int) -> Date {
@@ -77,10 +88,10 @@ struct LunarDatePickerViewModel {
     }
     
     mutating func setDate(year: Int? = nil, month: Int? = nil, day: Int? = nil) {
-        let dayStruct = date.day
-        let year = year ?? dayStruct.year
-        let month = month ?? dayStruct.month
-        let day = day ?? dayStruct.day
+        let dayStruct =     lunarConvert(date: date)
+        let year  = year    ?? dayStruct.year
+        let month = month   ?? dayStruct.month
+        let day   = day     ?? dayStruct.day
         date = convert(year: year, month: month, day: day)
     }
     
