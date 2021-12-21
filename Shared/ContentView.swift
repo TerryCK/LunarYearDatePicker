@@ -1,28 +1,32 @@
-# LunarYearDatePicker
-a Swift UI component for Lunar Calendar Picker
+//
+//  ContentView.swift
+//  Shared
+//
+//  Created by CHEN GUAN-JHEN on 2021/12/21.
+//
 
-!["ScreenShots"](/Screenshot/1.png)
+import SwiftUI
 
-
-
-Usage:
-```swift
 struct ContentView: View {
-
+    
     @State var date = Date()
-
+    
     var body: some View {
         VStack(alignment: .leading) {
             LunarDatePicker($date)
                 .pickerStyle(MenuPickerStyle())
-
+            
             DatePicker("國曆出生",
                        selection: $date,
                        displayedComponents: [.date])
-
-
+                
+            
         }.padding()
     }
 }
-```
-a Date Picker with a Converter between Solar & Lunar Calendar
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}

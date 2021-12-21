@@ -1,0 +1,722 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DE751B3F2771D9A400E29936 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE751B3E2771D9A400E29936 /* Tests_iOS.swift */; };
+		DE751B412771D9A400E29936 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE751B402771D9A400E29936 /* Tests_iOSLaunchTests.swift */; };
+		DE751B4B2771D9A400E29936 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE751B4A2771D9A400E29936 /* Tests_macOS.swift */; };
+		DE751B4D2771D9A400E29936 /* Tests_macOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE751B4C2771D9A400E29936 /* Tests_macOSLaunchTests.swift */; };
+		DE751B4E2771D9A400E29936 /* LunarDatePickerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE751B262771D9A200E29936 /* LunarDatePickerApp.swift */; };
+		DE751B4F2771D9A400E29936 /* LunarDatePickerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE751B262771D9A200E29936 /* LunarDatePickerApp.swift */; };
+		DE751B502771D9A400E29936 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE751B272771D9A200E29936 /* ContentView.swift */; };
+		DE751B512771D9A400E29936 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE751B272771D9A200E29936 /* ContentView.swift */; };
+		DE751B522771D9A400E29936 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE751B282771D9A400E29936 /* Assets.xcassets */; };
+		DE751B532771D9A400E29936 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE751B282771D9A400E29936 /* Assets.xcassets */; };
+		DE751B632771D9CB00E29936 /* LunarDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE751B622771D9CB00E29936 /* LunarDatePicker.swift */; };
+		DE751B642771D9CB00E29936 /* LunarDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE751B622771D9CB00E29936 /* LunarDatePicker.swift */; };
+		DE751B662771E3B400E29936 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE751B652771E3B400E29936 /* Regex.swift */; };
+		DE751B672771E3B400E29936 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE751B652771E3B400E29936 /* Regex.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DE751B3B2771D9A400E29936 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE751B212771D9A200E29936 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE751B2C2771D9A400E29936;
+			remoteInfo = "LunarDatePicker (iOS)";
+		};
+		DE751B472771D9A400E29936 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE751B212771D9A200E29936 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE751B322771D9A400E29936;
+			remoteInfo = "LunarDatePicker (macOS)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DE751B262771D9A200E29936 /* LunarDatePickerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunarDatePickerApp.swift; sourceTree = "<group>"; };
+		DE751B272771D9A200E29936 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DE751B282771D9A400E29936 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DE751B2D2771D9A400E29936 /* LunarDatePicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LunarDatePicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE751B332771D9A400E29936 /* LunarDatePicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LunarDatePicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE751B352771D9A400E29936 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		DE751B3A2771D9A400E29936 /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE751B3E2771D9A400E29936 /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
+		DE751B402771D9A400E29936 /* Tests_iOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOSLaunchTests.swift; sourceTree = "<group>"; };
+		DE751B462771D9A400E29936 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE751B4A2771D9A400E29936 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
+		DE751B4C2771D9A400E29936 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		DE751B622771D9CB00E29936 /* LunarDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunarDatePicker.swift; sourceTree = "<group>"; };
+		DE751B652771E3B400E29936 /* Regex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DE751B2A2771D9A400E29936 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE751B302771D9A400E29936 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE751B372771D9A400E29936 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE751B432771D9A400E29936 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DE751B202771D9A200E29936 = {
+			isa = PBXGroup;
+			children = (
+				DE751B252771D9A200E29936 /* Shared */,
+				DE751B342771D9A400E29936 /* macOS */,
+				DE751B3D2771D9A400E29936 /* Tests iOS */,
+				DE751B492771D9A400E29936 /* Tests macOS */,
+				DE751B2E2771D9A400E29936 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DE751B252771D9A200E29936 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				DE751B262771D9A200E29936 /* LunarDatePickerApp.swift */,
+				DE751B272771D9A200E29936 /* ContentView.swift */,
+				DE751B622771D9CB00E29936 /* LunarDatePicker.swift */,
+				DE751B652771E3B400E29936 /* Regex.swift */,
+				DE751B282771D9A400E29936 /* Assets.xcassets */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		DE751B2E2771D9A400E29936 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DE751B2D2771D9A400E29936 /* LunarDatePicker.app */,
+				DE751B332771D9A400E29936 /* LunarDatePicker.app */,
+				DE751B3A2771D9A400E29936 /* Tests iOS.xctest */,
+				DE751B462771D9A400E29936 /* Tests macOS.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DE751B342771D9A400E29936 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				DE751B352771D9A400E29936 /* macOS.entitlements */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		DE751B3D2771D9A400E29936 /* Tests iOS */ = {
+			isa = PBXGroup;
+			children = (
+				DE751B3E2771D9A400E29936 /* Tests_iOS.swift */,
+				DE751B402771D9A400E29936 /* Tests_iOSLaunchTests.swift */,
+			);
+			path = "Tests iOS";
+			sourceTree = "<group>";
+		};
+		DE751B492771D9A400E29936 /* Tests macOS */ = {
+			isa = PBXGroup;
+			children = (
+				DE751B4A2771D9A400E29936 /* Tests_macOS.swift */,
+				DE751B4C2771D9A400E29936 /* Tests_macOSLaunchTests.swift */,
+			);
+			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DE751B2C2771D9A400E29936 /* LunarDatePicker (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE751B562771D9A400E29936 /* Build configuration list for PBXNativeTarget "LunarDatePicker (iOS)" */;
+			buildPhases = (
+				DE751B292771D9A400E29936 /* Sources */,
+				DE751B2A2771D9A400E29936 /* Frameworks */,
+				DE751B2B2771D9A400E29936 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LunarDatePicker (iOS)";
+			productName = "LunarDatePicker (iOS)";
+			productReference = DE751B2D2771D9A400E29936 /* LunarDatePicker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DE751B322771D9A400E29936 /* LunarDatePicker (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE751B592771D9A400E29936 /* Build configuration list for PBXNativeTarget "LunarDatePicker (macOS)" */;
+			buildPhases = (
+				DE751B2F2771D9A400E29936 /* Sources */,
+				DE751B302771D9A400E29936 /* Frameworks */,
+				DE751B312771D9A400E29936 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LunarDatePicker (macOS)";
+			productName = "LunarDatePicker (macOS)";
+			productReference = DE751B332771D9A400E29936 /* LunarDatePicker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DE751B392771D9A400E29936 /* Tests iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE751B5C2771D9A400E29936 /* Build configuration list for PBXNativeTarget "Tests iOS" */;
+			buildPhases = (
+				DE751B362771D9A400E29936 /* Sources */,
+				DE751B372771D9A400E29936 /* Frameworks */,
+				DE751B382771D9A400E29936 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE751B3C2771D9A400E29936 /* PBXTargetDependency */,
+			);
+			name = "Tests iOS";
+			productName = "Tests iOS";
+			productReference = DE751B3A2771D9A400E29936 /* Tests iOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		DE751B452771D9A400E29936 /* Tests macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE751B5F2771D9A400E29936 /* Build configuration list for PBXNativeTarget "Tests macOS" */;
+			buildPhases = (
+				DE751B422771D9A400E29936 /* Sources */,
+				DE751B432771D9A400E29936 /* Frameworks */,
+				DE751B442771D9A400E29936 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE751B482771D9A400E29936 /* PBXTargetDependency */,
+			);
+			name = "Tests macOS";
+			productName = "Tests macOS";
+			productReference = DE751B462771D9A400E29936 /* Tests macOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DE751B212771D9A200E29936 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					DE751B2C2771D9A400E29936 = {
+						CreatedOnToolsVersion = 13.2;
+					};
+					DE751B322771D9A400E29936 = {
+						CreatedOnToolsVersion = 13.2;
+					};
+					DE751B392771D9A400E29936 = {
+						CreatedOnToolsVersion = 13.2;
+						TestTargetID = DE751B2C2771D9A400E29936;
+					};
+					DE751B452771D9A400E29936 = {
+						CreatedOnToolsVersion = 13.2;
+						TestTargetID = DE751B322771D9A400E29936;
+					};
+				};
+			};
+			buildConfigurationList = DE751B242771D9A200E29936 /* Build configuration list for PBXProject "LunarDatePicker" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DE751B202771D9A200E29936;
+			productRefGroup = DE751B2E2771D9A400E29936 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DE751B2C2771D9A400E29936 /* LunarDatePicker (iOS) */,
+				DE751B322771D9A400E29936 /* LunarDatePicker (macOS) */,
+				DE751B392771D9A400E29936 /* Tests iOS */,
+				DE751B452771D9A400E29936 /* Tests macOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DE751B2B2771D9A400E29936 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE751B522771D9A400E29936 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE751B312771D9A400E29936 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE751B532771D9A400E29936 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE751B382771D9A400E29936 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE751B442771D9A400E29936 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DE751B292771D9A400E29936 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE751B502771D9A400E29936 /* ContentView.swift in Sources */,
+				DE751B662771E3B400E29936 /* Regex.swift in Sources */,
+				DE751B4E2771D9A400E29936 /* LunarDatePickerApp.swift in Sources */,
+				DE751B632771D9CB00E29936 /* LunarDatePicker.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE751B2F2771D9A400E29936 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE751B512771D9A400E29936 /* ContentView.swift in Sources */,
+				DE751B672771E3B400E29936 /* Regex.swift in Sources */,
+				DE751B4F2771D9A400E29936 /* LunarDatePickerApp.swift in Sources */,
+				DE751B642771D9CB00E29936 /* LunarDatePicker.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE751B362771D9A400E29936 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE751B412771D9A400E29936 /* Tests_iOSLaunchTests.swift in Sources */,
+				DE751B3F2771D9A400E29936 /* Tests_iOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE751B422771D9A400E29936 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE751B4D2771D9A400E29936 /* Tests_macOSLaunchTests.swift in Sources */,
+				DE751B4B2771D9A400E29936 /* Tests_macOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DE751B3C2771D9A400E29936 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE751B2C2771D9A400E29936 /* LunarDatePicker (iOS) */;
+			targetProxy = DE751B3B2771D9A400E29936 /* PBXContainerItemProxy */;
+		};
+		DE751B482771D9A400E29936 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE751B322771D9A400E29936 /* LunarDatePicker (macOS) */;
+			targetProxy = DE751B472771D9A400E29936 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		DE751B542771D9A400E29936 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DE751B552771D9A400E29936 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		DE751B572771D9A400E29936 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y8SJ5M44N4;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.bulletproof.LunarDatePicker;
+				PRODUCT_NAME = LunarDatePicker;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		DE751B582771D9A400E29936 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y8SJ5M44N4;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.bulletproof.LunarDatePicker;
+				PRODUCT_NAME = LunarDatePicker;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DE751B5A2771D9A400E29936 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y8SJ5M44N4;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.bulletproof.LunarDatePicker;
+				PRODUCT_NAME = LunarDatePicker;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		DE751B5B2771D9A400E29936 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y8SJ5M44N4;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.bulletproof.LunarDatePicker;
+				PRODUCT_NAME = LunarDatePicker;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		DE751B5D2771D9A400E29936 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y8SJ5M44N4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.bulletproof.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "LunarDatePicker (iOS)";
+			};
+			name = Debug;
+		};
+		DE751B5E2771D9A400E29936 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y8SJ5M44N4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.bulletproof.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "LunarDatePicker (iOS)";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DE751B602771D9A400E29936 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y8SJ5M44N4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.bulletproof.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "LunarDatePicker (macOS)";
+			};
+			name = Debug;
+		};
+		DE751B612771D9A400E29936 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y8SJ5M44N4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.bulletproof.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "LunarDatePicker (macOS)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DE751B242771D9A200E29936 /* Build configuration list for PBXProject "LunarDatePicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE751B542771D9A400E29936 /* Debug */,
+				DE751B552771D9A400E29936 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE751B562771D9A400E29936 /* Build configuration list for PBXNativeTarget "LunarDatePicker (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE751B572771D9A400E29936 /* Debug */,
+				DE751B582771D9A400E29936 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE751B592771D9A400E29936 /* Build configuration list for PBXNativeTarget "LunarDatePicker (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE751B5A2771D9A400E29936 /* Debug */,
+				DE751B5B2771D9A400E29936 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE751B5C2771D9A400E29936 /* Build configuration list for PBXNativeTarget "Tests iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE751B5D2771D9A400E29936 /* Debug */,
+				DE751B5E2771D9A400E29936 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE751B5F2771D9A400E29936 /* Build configuration list for PBXNativeTarget "Tests macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE751B602771D9A400E29936 /* Debug */,
+				DE751B612771D9A400E29936 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DE751B212771D9A200E29936 /* Project object */;
+}
