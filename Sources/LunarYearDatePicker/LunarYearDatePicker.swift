@@ -11,14 +11,14 @@ import Combine
 
 // TODO: Suggest to rename to `LunarDate`
 struct LunarDate {
-   let year, month, day: Int
+    let year, month, day: Int
 }
 // TODO: Move logic from `LunarDateModel` into `LunarDate`'s extension
 
 
 // TODO: Suggest to rename to `LunarDateModel`
 struct LunarDateModel {
-    var date: Date
+    @Binding var date: Date
     
     var day  : Int   { fetch(date, \.day)   }
     var month: Int   { fetch(date, \.month) }
@@ -36,7 +36,7 @@ struct LunarDateModel {
             return day[keyPath: keyPath]
         }
     }
-
+    
     
     private func lunarConvert(date: Date) -> LunarDate {
         let year = Calendar(identifier: .republicOfChina)
@@ -49,8 +49,8 @@ struct LunarDateModel {
         let string = formatter.string(from: date)
         let dateInt = string.captureGroups(with: "(\\d*)[^年](\\d*)[^月](\\d*)[^日]".regex).compactMap(Int.init)
         return LunarDate(year: dateInt[0],
-                   month: dateInt[1] - 1,
-                   day: dateInt[2] - 3)
+                         month: dateInt[1] - 1,
+                         day: dateInt[2] - 3)
     }
     
     
@@ -66,9 +66,9 @@ struct LunarDateModel {
     }
     
     
-
-    init(date: Date) {
-        self.date = date
+    
+    init(date: Binding<Date>) {
+        _date = date
     }
     
     func convertString(year: Int, month: Int, day: Int) -> String {
@@ -111,25 +111,32 @@ struct LunarDateModel {
     }
 }
 
-struct LunarDatePicker: View {
 
-    @Binding var viewModel: LunarDatePickerViewModel
+struct LunarDatePicker: View {
+    
+    init(date: Binding<Date>) {
+        _viewModel = .init(wrappedValue: LunarDateModel(date: date))
+    }
+    
+    @State var viewModel: LunarDateModel
     
     var body: some View {
         VStack(spacing: 8) {
             HStack {
                 Text("農曆")
-                Picker("選擇一個年", selection: Binding(get: { viewModel.year },
-                                                      set: { viewModel.setDate(year: $0)})
+                Picker("選擇一個年",
+                       selection: Binding(get: { viewModel.year },
+                                          set: { viewModel.setDate(year: $0)})
                 ) {
-                    ForEach(1...Date().day.year, id: \.self) { index in
+                    ForEach(1...110, id: \.self) { index in
                         Text("民國 " + String(index) + " 年")
                             .tag(index)
                     }
                 }
                 
-                Picker("選擇一個月", selection: Binding(get: { viewModel.month },
-                                                      set: { viewModel.setDate(month: $0)})
+                Picker("選擇一個月",
+                       selection: Binding(get: { viewModel.month },
+                                          set: { viewModel.setDate(month: $0)})
                 ) {
                     ForEach(1...12, id: \.self) { index in
                         Text(String(index) + " 月")
@@ -137,8 +144,9 @@ struct LunarDatePicker: View {
                     }
                 }
                 
-                Picker("選擇一個日",  selection: Binding(get: { viewModel.day },
-                                                       set: { viewModel.setDate(day: $0)})
+                Picker("選擇一個日",
+                       selection: Binding(get: { viewModel.day },
+                                          set: { viewModel.setDate(day: $0)})
                 ) {
                     ForEach(1...31, id: \.self) { index in
                         Text(String(index) + " 日")
@@ -152,6 +160,6 @@ struct LunarDatePicker: View {
 
 struct LunarDatePicker_Previews: PreviewProvider {
     static var previews: some View {
-        LunarDatePicker(viewModel: .constant(.init(date: Date())))
+        LunarDatePicker(date: .constant(Date()))
     }
 }
